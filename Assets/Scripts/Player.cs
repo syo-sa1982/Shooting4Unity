@@ -1,11 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Player : MonoBehaviour {
-
+public class Player : MonoBehaviour 
+{
 	// 移動速度
 	public float speed = 5;
+	// PlayerBullet
+	public GameObject bullet;
 
+	// Startメソッドをコルーチンとして呼び出し
+	IEnumerator Start() 
+	{
+		while(true) {
+			// 作成したいオブジェクト、位置、角度
+			Instantiate (bullet, transform.position, transform.rotation);
+			// 待つ
+			yield return new WaitForSeconds (0.05f);
+		}
+	}
 
 	// Update is called once per frame
 	void Update () 
