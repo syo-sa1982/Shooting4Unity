@@ -8,14 +8,21 @@ public class Player : MonoBehaviour
 	// PlayerBullet
 	public GameObject bullet;
 
+	// コンポーネント呼び出し
+	Spaceship spaceship;
+
+
 	// Startメソッドをコルーチンとして呼び出し
 	IEnumerator Start() 
 	{
+		// コンポーネント取得
+		spaceship = GetComponent<Spaceship> ();
+
 		while(true) {
 			// 作成したいオブジェクト、位置、角度
-			Instantiate (bullet, transform.position, transform.rotation);
+			spaceship.Shot (transform);
 			// 待つ
-			yield return new WaitForSeconds (0.05f);
+			yield return new WaitForSeconds (spaceship.shotDelay);
 		}
 	}
 
@@ -31,6 +38,6 @@ public class Player : MonoBehaviour
 		Vector2 direction = new Vector2 (x, y).normalized;
 
 		// 移動する向きとスピード
-		rigidbody2D.velocity = direction * speed;
+		spaceship.Move (direction);
 	}
 }
