@@ -3,11 +3,6 @@ using System.Collections;
 
 public class Player : MonoBehaviour 
 {
-	// 移動速度
-	public float speed = 5;
-	// PlayerBullet
-	public GameObject bullet;
-
 	// コンポーネント呼び出し
 	Spaceship spaceship;
 
