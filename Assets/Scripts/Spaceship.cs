@@ -13,6 +13,9 @@ public class Spaceship : MonoBehaviour
 	// 弾のPrefab
 	public GameObject bullet;
 
+	// 発砲するかどうか
+	public bool canShot;
+
 	// 弾の作成
 	public void Shot (Transform origin)
 	{
@@ -22,6 +25,7 @@ public class Spaceship : MonoBehaviour
 	// 機体の移動
 	public void Move (Vector2 direction)
 	{
+		Debug.Log ("Move");
 		rigidbody2D.velocity = direction * speed;
 	}
 

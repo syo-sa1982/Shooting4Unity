@@ -10,9 +10,15 @@ public class Enemy : MonoBehaviour
 	// Use this for initialization
 	IEnumerator Start () 
 	{
+
+		Debug.Log ("Start");
 		spaceship = GetComponent<Spaceship> ();
 
 		spaceship.Move (transform.up * -1);
+
+		if (spaceship.canShot == false) {
+			yield break;
+		}
 
 		while(true) {
 			// 子要素取得
