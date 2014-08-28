@@ -13,6 +13,7 @@ GameObject:
   - 50: {fileID: 5000000}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
+  - 60: {fileID: 6000000}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -131,6 +132,26 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!60 &6000000
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Poly:
+    m_Paths:
+    - - {x: .1332407, y: .254955292}
+      - {x: -.135750711, y: .249210715}
+      - {x: -.242824554, y: .183984041}
+      - {x: -.256206691, y: -.160707295}
+      - {x: -.158334851, y: -.276342928}
+      - {x: .1329633, y: -.272963345}
+      - {x: .24958384, y: -.163102031}
+      - {x: .232685685, y: .187918663}
+      - {x: .233518362, y: .191020608}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3
@@ -191,7 +212,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300014, guid: bf3bdd2147b394bc2b771f2556f0b49d, type: 3}
+  m_Sprite: {fileID: 21300010, guid: bf3bdd2147b394bc2b771f2556f0b49d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

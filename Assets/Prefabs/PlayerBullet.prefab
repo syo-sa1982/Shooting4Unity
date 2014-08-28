@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
+  - 60: {fileID: 6000002}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -42,6 +43,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400004}
   - 212: {fileID: 21200002}
+  - 60: {fileID: 6000000}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -68,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.57123482, y: 1.45267272, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400004}
@@ -102,6 +104,44 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!60 &6000000
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Poly:
+    m_Paths:
+    - - {x: -.0351468176, y: .159999967}
+      - {x: -.0621658415, y: .0867580175}
+      - {x: -.0621658415, y: .0315287113}
+      - {x: -.0249494165, y: -.162039399}
+      - {x: .0281800181, y: -.16276145}
+      - {x: .0613395125, y: .00970637798}
+      - {x: .0620613247, y: .0612875223}
+      - {x: .0379082114, y: .159999967}
+--- !u!60 &6000002
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Poly:
+    m_Paths:
+    - - {x: -.0351468176, y: .159999967}
+      - {x: -.0682843775, y: .0826790333}
+      - {x: -.0682843775, y: .0274497271}
+      - {x: -.0351469368, y: -.159999967}
+      - {x: .0241010338, y: -.16276145}
+      - {x: .0613395125, y: .00970637798}
+      - {x: .0620613247, y: .0612875223}
+      - {x: .0379082114, y: .159999967}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
