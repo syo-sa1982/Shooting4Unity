@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		// 右左
+		// 左右
 		float x = Input.GetAxisRaw ("Horizontal");
 		// 上下
 		float y = Input.GetAxisRaw ("Vertical");
@@ -38,7 +38,6 @@ public class Player : MonoBehaviour
 	// 衝突処理
 	void OnTriggerEnter2D (Collider2D c) 
 	{
-		Debug.Log ("被弾");
 		// 弾の削除
 		Destroy (c.gameObject);
 

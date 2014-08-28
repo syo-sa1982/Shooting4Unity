@@ -33,7 +33,6 @@ public class Spaceship : MonoBehaviour
 	// 機体の移動
 	public void Move (Vector2 direction)
 	{
-		Debug.Log ("Move");
 		rigidbody2D.velocity = direction * speed;
 	}
 
