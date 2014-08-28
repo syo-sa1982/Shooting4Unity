@@ -99,6 +99,7 @@ MonoBehaviour:
   shotDelay: .0500000007
   bullet: {fileID: 100002, guid: b1fbb0042d0ea4a06b3ec9192cbfc630, type: 2}
   canShot: 0
+  explosion: {fileID: 100000, guid: f37200f69d10a4735a67efaf6baef5f6, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

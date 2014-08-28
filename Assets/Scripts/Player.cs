@@ -6,7 +6,6 @@ public class Player : MonoBehaviour
 	// コンポーネント呼び出し
 	Spaceship spaceship;
 
-
 	// Startメソッドをコルーチンとして呼び出し
 	IEnumerator Start() 
 	{
@@ -34,5 +33,20 @@ public class Player : MonoBehaviour
 
 		// 移動する向きとスピード
 		spaceship.Move (direction);
+	}
+
+	// 衝突処理
+	void OnTriggerEnter2D (Collider2D c) 
+	{
+		Debug.Log ("被弾");
+		// 弾の削除
+		Destroy (c.gameObject);
+
+		// 爆発
+		spaceship.Explosion();
+
+		// プレイヤー削除
+		Destroy (gameObject);
+
 	}
 }
