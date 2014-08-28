@@ -38,14 +38,23 @@ public class Player : MonoBehaviour
 	// 衝突処理
 	void OnTriggerEnter2D (Collider2D c) 
 	{
-		// 弾の削除
-		Destroy (c.gameObject);
+		string layerName = LayerMask.LayerToName (c.gameObject.layer);
 
-		// 爆発
-		spaceship.Explosion();
+		// レイヤー名がBullet(Enemy)の時は弾を消す
+		if(layerName == "BulletEnemy") 
+		{
+			// 弾の削除
+			Destroy (c.gameObject);
+		}
 
-		// プレイヤー削除
-		Destroy (gameObject);
+		// レイヤー名がBullet (Enemy)またはEnemyの場合は爆発
+		if (layerName == "BulletEnemy" || layerName == "Enemy") {
+			// 爆発
+			spaceship.Explosion ();
+
+			// プレイヤー削除
+			Destroy (gameObject);
+		}
 
 	}
 }
