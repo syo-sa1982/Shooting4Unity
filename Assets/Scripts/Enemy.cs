@@ -32,4 +32,22 @@ public class Enemy : MonoBehaviour
 		}
 
 	}
+
+	void OnTriggerEnter2D (Collider2D c)
+	{
+		// レイヤー名取得
+		string layerName = LayerMask.LayerToName (c.gameObject.layer);
+
+		// レイヤー名がBulletPlayerの時以外はリターン
+		if (layerName != "BulletPlayer") return;
+
+		// 弾削除
+		Destroy (c.gameObject);
+
+		// 爆発
+		spaceship.Explosion ();
+
+		// エネミーの削除
+		Destroy (gameObject);
+	}
 }
