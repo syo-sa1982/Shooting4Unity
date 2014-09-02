@@ -16,9 +16,7 @@ public class Enemy : MonoBehaviour
 
 		spaceship.Move (transform.up * -1);
 
-		if (spaceship.canShot == false) {
-			yield break;
-		}
+		if (spaceship.canShot == false) { yield break; }
 
 		while(true) {
 			// 子要素取得
@@ -39,7 +37,7 @@ public class Enemy : MonoBehaviour
 		string layerName = LayerMask.LayerToName (c.gameObject.layer);
 
 		// レイヤー名がBulletPlayerの時以外はリターン
-		if (layerName != "BulletPlayer") return;
+		if (layerName != "BulletPlayer") { return; }
 
 		// 弾削除
 		Destroy (c.gameObject);
