@@ -15,6 +15,10 @@ public class Player : MonoBehaviour
 		while(true) {
 			// 作成したいオブジェクト、位置、角度
 			spaceship.Shot (transform);
+
+			// ショット音を鳴らす
+			audio.Play();
+
 			// 待つ
 			yield return new WaitForSeconds (spaceship.shotDelay);
 		}
@@ -33,6 +37,30 @@ public class Player : MonoBehaviour
 
 		// 移動する向きとスピード
 		spaceship.Move (direction);
+
+		// 移動の制限
+		Clamp ();
+	}
+
+	// 移動制限
+	void Clamp()
+	{
+		// 左下のワールド座標
+		Vector2 min = Camera.main.ViewportToWorldPoint (new Vector2(0, 0));
+
+		// 右下のワールド座標
+		Vector2 max = Camera.main.ViewportToWorldPoint (new Vector2(1, 1));
+
+		// プレイヤーの座標を取得
+		Vector2 pos = transform.position;
+
+		// プレイヤーの位置が画面内に収まるように制限をかける
+		pos.x = Mathf.Clamp (pos.x, min.x, max.x);
+		pos.y = Mathf.Clamp (pos.y, min.y, max.y);
+
+		// 制限をかけた値をプレイヤーの位置とする
+		transform.position = pos;
+
 	}
 
 	// 衝突処理
@@ -55,6 +83,5 @@ public class Player : MonoBehaviour
 			// プレイヤー削除
 			Destroy (gameObject);
 		}
-
 	}
 }
