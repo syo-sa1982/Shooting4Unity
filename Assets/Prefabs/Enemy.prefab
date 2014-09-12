@@ -11,7 +11,6 @@ GameObject:
   - 212: {fileID: 21200000}
   - 95: {fileID: 9500000}
   - 50: {fileID: 5000000}
-  - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
   - 60: {fileID: 6000000}
   m_Layer: 9
@@ -177,22 +176,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c63fc8c2c446a4051b19882e19c5c870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0df3035055754f64a3eddfe1312b5e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: .5
-  shotDelay: .300000012
+  speed: 1
+  shotDelay: 1
   bullet: {fileID: 100000, guid: 07a7a6d8ce8a341a698281919b794133, type: 2}
-  canShot: 0
-  explosion: {fileID: 0}
+  canShot: 1
+  explosion: {fileID: 100000, guid: f37200f69d10a4735a67efaf6baef5f6, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

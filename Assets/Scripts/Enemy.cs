@@ -1,34 +1,34 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Enemy : MonoBehaviour 
+public class Enemy : Spaceship 
 {
-
-	// コンポーネント
-	Spaceship spaceship;
-
 	// Use this for initialization
 	IEnumerator Start () 
 	{
 
 		Debug.Log ("Start");
-		spaceship = GetComponent<Spaceship> ();
 
-		spaceship.Move (transform.up * -1);
+		this.Move (transform.up * -1);
 
-		if (spaceship.canShot == false) { yield break; }
+		if (this.canShot == false) { yield break; }
 
 		while(true) {
 			// 子要素取得
 			for(int i = 0; i < transform.childCount; i++) {
 				Transform shotPosition = transform.GetChild(i);
 
-				spaceship.Shot(shotPosition);
+				this.Shot(shotPosition);
 			}
 
-			yield return new WaitForSeconds (spaceship.shotDelay);
+			yield return new WaitForSeconds (this.shotDelay);
 		}
 
+	}
+
+	protected override void Move (Vector2 direction)
+	{
+		rigidbody2D.velocity = direction * speed;
 	}
 
 	void OnTriggerEnter2D (Collider2D c)
@@ -43,7 +43,7 @@ public class Enemy : MonoBehaviour
 		Destroy (c.gameObject);
 
 		// 爆発
-		spaceship.Explosion ();
+		this.Explosion ();
 
 		// エネミーの削除
 		Destroy (gameObject);

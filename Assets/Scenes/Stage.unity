@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 100008, guid: a0210a77b92874cc094935315b68ed50, type: 2}
+  - {fileID: 100024, guid: a0210a77b92874cc094935315b68ed50, type: 2}
 --- !u!4 &514537631
 Transform:
   m_ObjectHideFlags: 0
@@ -489,6 +489,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8395c5732d9124ab8bdf6af37a07ebc6, type: 2}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8395c5732d9124ab8bdf6af37a07ebc6, type: 2}
+      propertyPath: canShot
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8395c5732d9124ab8bdf6af37a07ebc6, type: 2}
   m_RootGameObject: {fileID: 1944959186}
@@ -671,7 +679,6 @@ GameObject:
   - 95: {fileID: 1944959188}
   - 50: {fileID: 1944959187}
   - 114: {fileID: 1944959191}
-  - 114: {fileID: 1944959192}
   - 61: {fileID: 1944959193}
   - 82: {fileID: 1944959194}
   m_Layer: 8
@@ -759,22 +766,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 068206f49446f4aaf841783cfa859672, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1944959192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400002, guid: 8395c5732d9124ab8bdf6af37a07ebc6,
-    type: 2}
-  m_PrefabInternal: {fileID: 1389553643}
-  m_GameObject: {fileID: 1944959186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0df3035055754f64a3eddfe1312b5e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   speed: 5
   shotDelay: .0500000007
   bullet: {fileID: 100002, guid: b1fbb0042d0ea4a06b3ec9192cbfc630, type: 2}
-  canShot: 0
+  canShot: 1
   explosion: {fileID: 100000, guid: f37200f69d10a4735a67efaf6baef5f6, type: 2}
 --- !u!61 &1944959193
 BoxCollider2D:

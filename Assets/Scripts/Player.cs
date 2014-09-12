@@ -1,26 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Player : MonoBehaviour 
+public class Player : Spaceship 
 {
-	// コンポーネント呼び出し
-	Spaceship spaceship;
-
 	// Startメソッドをコルーチンとして呼び出し
 	IEnumerator Start() 
 	{
-		// コンポーネント取得
-		spaceship = GetComponent<Spaceship> ();
 
 		while(true) {
 			// 作成したいオブジェクト、位置、角度
-			spaceship.Shot (transform);
+			this.Shot (transform);
 
 			// ショット音を鳴らす
 			audio.Play();
 
 			// 待つ
-			yield return new WaitForSeconds (spaceship.shotDelay);
+			yield return new WaitForSeconds (this.shotDelay);
 		}
 	}
 
@@ -36,14 +31,11 @@ public class Player : MonoBehaviour
 		Vector2 direction = new Vector2 (x, y).normalized;
 
 		// 移動する向きとスピード
-		spaceship.Move (direction);
-
-		// 移動の制限
-		Clamp ();
+		this.Move (direction);
 	}
 
-	// 移動制限
-	void Clamp()
+	// 抽象メソッドをオーバーライド
+	protected override void Move (Vector2 direction)
 	{
 		// 左下のワールド座標
 		Vector2 min = Camera.main.ViewportToWorldPoint (new Vector2(0, 0));
@@ -54,14 +46,17 @@ public class Player : MonoBehaviour
 		// プレイヤーの座標を取得
 		Vector2 pos = transform.position;
 
+		// 移動量を加える
+		pos += direction  * this.speed * Time.deltaTime;
+
 		// プレイヤーの位置が画面内に収まるように制限をかける
 		pos.x = Mathf.Clamp (pos.x, min.x, max.x);
 		pos.y = Mathf.Clamp (pos.y, min.y, max.y);
 
 		// 制限をかけた値をプレイヤーの位置とする
 		transform.position = pos;
-
 	}
+
 
 	// 衝突処理
 	void OnTriggerEnter2D (Collider2D c) 
@@ -78,7 +73,7 @@ public class Player : MonoBehaviour
 		// レイヤー名がBullet (Enemy)またはEnemyの場合は爆発
 		if (layerName == "BulletEnemy" || layerName == "Enemy") {
 			// 爆発
-			spaceship.Explosion ();
+			this.Explosion ();
 
 			// プレイヤー削除
 			Destroy (gameObject);
