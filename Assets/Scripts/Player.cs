@@ -71,7 +71,11 @@ public class Player : Spaceship
 		}
 
 		// レイヤー名がBullet (Enemy)またはEnemyの場合は爆発
-		if (layerName == "BulletEnemy" || layerName == "Enemy") {
+		if (layerName == "BulletEnemy" || layerName == "Enemy") 
+		{
+			// Managerコンポーネントをシーン内から探して取得し、GameOverメソッドを呼び出す
+			FindObjectOfType<Manager>().GameOver();
+
 			// 爆発
 			this.Explosion ();
 
