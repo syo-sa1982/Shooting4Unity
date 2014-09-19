@@ -12,12 +12,15 @@ public class Emitter : MonoBehaviour
 	// Managerコンポーネント
 	private Manager manager;
 
-
 	// Use this for initialization
 	IEnumerator Start () 
 	{
+		Debug.Log ("Emitter Start");
 		// Waveが存在しなければコルーチンを終了する
 		if (waves.Length == 0) { yield break; }
+
+		// Managerコンポーネントをシーン内から探して取得する
+		manager = FindObjectOfType<Manager>();
 
 		while (true) {
 

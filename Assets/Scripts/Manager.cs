@@ -6,11 +6,16 @@ public class Manager : MonoBehaviour
 
 	private GameObject title;
 
-	// Use this for initialization
-	void Start () 
+	void Awake ()
 	{
 		// Titleゲームオブジェクトを検索し取得する
 		title = GameObject.Find ("Title");
+	}
+
+	// Use this for initialization
+	void Start () 
+	{
+		Debug.Log ("Manager Start");
 	}
 	
 	// Update is called once per frame

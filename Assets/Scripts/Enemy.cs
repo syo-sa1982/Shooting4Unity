@@ -3,11 +3,12 @@ using System.Collections;
 
 public class Enemy : Spaceship 
 {
+	// ヒットポイント
+	public int hp = 1;
+
 	// Use this for initialization
 	IEnumerator Start () 
 	{
-
-		Debug.Log ("Start");
 
 		this.Move (transform.up * -1);
 
@@ -28,7 +29,7 @@ public class Enemy : Spaceship
 
 	protected override void Move (Vector2 direction)
 	{
-		rigidbody2D.velocity = direction * speed;
+		rigidbody2D.velocity = direction * this.speed;
 	}
 
 	void OnTriggerEnter2D (Collider2D c)
@@ -39,13 +40,25 @@ public class Enemy : Spaceship
 		// レイヤー名がBulletPlayerの時以外はリターン
 		if (layerName != "BulletPlayer") { return; }
 
+		// PlayerBulletのTransformを取得
+		Transform playerBulletTransform = c.transform.parent;
+
+		// Bulletコンポーネントを取得
+		Bullet bullet =  playerBulletTransform.GetComponent<Bullet>();
+
+		// ヒットポイントを減らす
+		hp = hp - bullet.power;
+
 		// 弾削除
 		Destroy (c.gameObject);
 
-		// 爆発
-		this.Explosion ();
+		// ヒットポイントが0以下であれば
+		if (hp <= 0) {
+			// 爆発
+			this.Explosion ();
 
-		// エネミーの削除
-		Destroy (gameObject);
+			// エネミーの削除
+			Destroy (gameObject);
+		}
 	}
 }

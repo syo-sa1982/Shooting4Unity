@@ -536,11 +536,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c63fc8c2c446a4051b19882e19c5c870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  shotDelay: 1
+  speed: .5
+  shotDelay: .300000012
   bullet: {fileID: 100000, guid: 07a7a6d8ce8a341a698281919b794133, type: 2}
   canShot: 1
   explosion: {fileID: 100000, guid: f37200f69d10a4735a67efaf6baef5f6, type: 2}
+  hp: 10
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -552,11 +553,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c63fc8c2c446a4051b19882e19c5c870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  shotDelay: 1
+  speed: .5
+  shotDelay: .300000012
   bullet: {fileID: 100000, guid: 07a7a6d8ce8a341a698281919b794133, type: 2}
   canShot: 1
   explosion: {fileID: 100000, guid: f37200f69d10a4735a67efaf6baef5f6, type: 2}
+  hp: 10
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -568,11 +570,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c63fc8c2c446a4051b19882e19c5c870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  shotDelay: 1
+  speed: .5
+  shotDelay: .300000012
   bullet: {fileID: 100000, guid: 07a7a6d8ce8a341a698281919b794133, type: 2}
   canShot: 1
   explosion: {fileID: 100000, guid: f37200f69d10a4735a67efaf6baef5f6, type: 2}
+  hp: 10
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
