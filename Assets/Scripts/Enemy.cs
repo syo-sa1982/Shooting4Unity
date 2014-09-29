@@ -9,6 +9,7 @@ public class Enemy : Spaceship
 	// Use this for initialization
 	IEnumerator Start () 
 	{
+		this.SetAnimator ();
 
 		this.Move (transform.up * -1);
 
@@ -58,7 +59,9 @@ public class Enemy : Spaceship
 			this.Explosion ();
 
 			// エネミーの削除
-			Destroy (gameObject);
+			Destroy(gameObject);
+		} else {
+			this.GetAnimator().SetTrigger("Damage");
 		}
 	}
 }

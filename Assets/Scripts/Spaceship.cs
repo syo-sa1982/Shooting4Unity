@@ -18,6 +18,9 @@ public abstract class Spaceship : MonoBehaviour
 
 	public GameObject explosion;
 
+	private Animator animator;
+
+
 	// 爆発
 	public void Explosion ()
 	{
@@ -28,6 +31,18 @@ public abstract class Spaceship : MonoBehaviour
 	public void Shot (Transform origin)
 	{
 		Instantiate (bullet, origin.position, origin.rotation);
+	}
+
+
+	public void SetAnimator()
+	{
+		Debug.Log ("SetAnimator");
+		animator = GetComponent<Animator> ();
+	}
+
+	public Animator GetAnimator()
+	{
+		return animator;
 	}
 
 	// 機体の移動
