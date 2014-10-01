@@ -24,6 +24,7 @@ public class Player : Spaceship
 	{
 		// 左右
 		float x = Input.GetAxisRaw ("Horizontal");
+
 		// 上下
 		float y = Input.GetAxisRaw ("Vertical");
 
