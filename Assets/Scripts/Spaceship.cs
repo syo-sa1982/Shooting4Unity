@@ -36,8 +36,6 @@ public abstract class Spaceship : MonoBehaviour
 
 	public void SetAnimator()
 	{
-		Debug.Log ("SetAnimator");
-        Debug.Log("VSから書いてみた");
 		animator = GetComponent<Animator> ();
 	}
 
