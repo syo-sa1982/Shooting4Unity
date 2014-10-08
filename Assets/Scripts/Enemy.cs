@@ -6,6 +6,9 @@ public class Enemy : Spaceship
 	// ヒットポイント
 	public int hp = 1;
 
+	// スコアのポイント
+	public int point = 100;
+
 	// Use this for initialization
 	IEnumerator Start () 
 	{
@@ -55,6 +58,9 @@ public class Enemy : Spaceship
 
 		// ヒットポイントが0以下であれば
 		if (hp <= 0) {
+			// ポイント追加
+			FindObjectOfType<Score> ().AddPoint (point);
+
 			// 爆発
 			this.Explosion ();
 

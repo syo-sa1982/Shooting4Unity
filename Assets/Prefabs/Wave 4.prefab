@@ -1433,6 +1433,7 @@ MonoBehaviour:
   canShot: 0
   explosion: {fileID: 100000, guid: f37200f69d10a4735a67efaf6baef5f6, type: 2}
   hp: 10
+  point: 200
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1450,6 +1451,7 @@ MonoBehaviour:
   canShot: 0
   explosion: {fileID: 100000, guid: f37200f69d10a4735a67efaf6baef5f6, type: 2}
   hp: 10
+  point: 200
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1467,6 +1469,7 @@ MonoBehaviour:
   canShot: 0
   explosion: {fileID: 100000, guid: f37200f69d10a4735a67efaf6baef5f6, type: 2}
   hp: 10
+  point: 200
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1484,6 +1487,7 @@ MonoBehaviour:
   canShot: 0
   explosion: {fileID: 100000, guid: f37200f69d10a4735a67efaf6baef5f6, type: 2}
   hp: 10
+  point: 200
 --- !u!114 &11400018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1501,6 +1505,7 @@ MonoBehaviour:
   canShot: 0
   explosion: {fileID: 100000, guid: f37200f69d10a4735a67efaf6baef5f6, type: 2}
   hp: 10
+  point: 200
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1518,6 +1523,7 @@ MonoBehaviour:
   canShot: 0
   explosion: {fileID: 100000, guid: f37200f69d10a4735a67efaf6baef5f6, type: 2}
   hp: 10
+  point: 200
 --- !u!114 &11400024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1535,6 +1541,7 @@ MonoBehaviour:
   canShot: 0
   explosion: {fileID: 100000, guid: f37200f69d10a4735a67efaf6baef5f6, type: 2}
   hp: 10
+  point: 200
 --- !u!114 &11400030
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1552,6 +1559,7 @@ MonoBehaviour:
   canShot: 0
   explosion: {fileID: 100000, guid: f37200f69d10a4735a67efaf6baef5f6, type: 2}
   hp: 10
+  point: 200
 --- !u!114 &11400032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1569,6 +1577,7 @@ MonoBehaviour:
   canShot: 0
   explosion: {fileID: 100000, guid: f37200f69d10a4735a67efaf6baef5f6, type: 2}
   hp: 10
+  point: 200
 --- !u!114 &11400038
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1586,6 +1595,7 @@ MonoBehaviour:
   canShot: 0
   explosion: {fileID: 100000, guid: f37200f69d10a4735a67efaf6baef5f6, type: 2}
   hp: 10
+  point: 200
 --- !u!114 &11400042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1603,6 +1613,7 @@ MonoBehaviour:
   canShot: 0
   explosion: {fileID: 100000, guid: f37200f69d10a4735a67efaf6baef5f6, type: 2}
   hp: 10
+  point: 200
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -19,5 +19,6 @@ public class Bullet : MonoBehaviour
 
 		// 弾の寿命が切れたら削除
 		Destroy (gameObject, lifeTime);
+
 	}
 }
